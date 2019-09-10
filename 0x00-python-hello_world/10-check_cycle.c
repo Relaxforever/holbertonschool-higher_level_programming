@@ -11,7 +11,7 @@ int check_cycle(listint_t *list)
 	int cont;
 
 	first = list;
-	third = first->list;
+	third = first->next;
 
 	if (list == NULL)
 	{
