@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
 *reversing_list - reverses the list
 *@head: the head of the node
