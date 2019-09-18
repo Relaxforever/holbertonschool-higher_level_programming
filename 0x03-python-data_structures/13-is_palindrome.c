@@ -35,8 +35,16 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp;
 	unsigned int cont;
 
+	if (*head == NULL)
+	{
+		return (1);
+	}
 	first = *head;
 	second = *head;
+	if (*head == NULL)
+	{
+		return (1);
+	}
 	for (cont = 0; first != NULL && first->next != NULL; cont++)
 	{
 		first = first->next->next;
