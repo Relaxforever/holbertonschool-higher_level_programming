@@ -5,5 +5,4 @@ def complex_delete(a_dictionary, value):
     for x in list(a_dictionary):
         if a_dictionary[x] is value:
             a_dictionary.pop(value)
-            break
     return a_dictionary
