@@ -3,7 +3,7 @@ def complex_delete(a_dictionary, value):
     if not value:
         return None
     for x in list(a_dictionary):
-        if x == value:
+        if a_dictionary[x] == value:
             a_dictionary.pop(value)
             break
     return a_dictionary
