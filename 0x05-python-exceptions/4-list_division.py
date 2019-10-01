@@ -23,7 +23,7 @@ def list_division(my_list_1, my_list_2, list_length):
             pass
         except ZeroDivisionError:
             list_tmp[i] += 0
-            print("division by Zero")
+            print("division by 0")
             i = i + 1
             pass
         finally:
