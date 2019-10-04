@@ -1,0 +1,53 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+This is an example text file in reStructuredText format.  First
+import
+``matrix_divided`` from the ``2-matrix_divided`` module:
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# simple division by 3
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+#Case failed when you are giving a row
+>>> matrix_divided([], 3)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# when you are giving a blank matrix with blank rows
+>>> matrix_divided([[]], 3)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Case matrix with different row lens
+>>> matrix_divided([[1, 2, 3], [4, 5]], 3)
+Traceback (most recent call last):
+	...
+TypeError: Each row of the matrix must have the same size
+
+# case when trying to divide by zero
+>>> matrix_divided([[1, 2, 3],[4, 5, 6]], 0)
+Traceback (most recent call last):
+	...
+ZeroDivisionError: division by zero
+
+# case when its a matrix with only one list
+>>> matrix_divided([[1, 2, 3]], 3)
+[[0.33, 0.67, 1.0]]
+
+# case failed When it's only a list
+>>> matrix_divided([1, 2, 3], 3)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# case divided by negative
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], -4)
+[[-0.25, -0.5, -0.75], [-1.0, -1.25, -1.5]]

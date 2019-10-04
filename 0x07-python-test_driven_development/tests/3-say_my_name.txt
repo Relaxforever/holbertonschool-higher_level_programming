@@ -5,9 +5,55 @@ This is an example text file in reStructuredText format.  First import
 ``say_my_name`` from the ``3-say_my_name`` module:
 
 >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Case when given a simple name
 >>> say_my_name("John", "Connor")
 My name is John Connor
+
+# Case given more simple names
 >>> say_my_name("Stop", "Criminal")
 My name is Stop Criminal
+
+# Case when given again only more names
 >>> say_my_name("The Nation", "Calls")
 My name is The Nation Calls
+
+# Case when only first_name it should print it with
+>>> say_my_name("Nations")
+My name is Nations 
+
+# Case only given first_name it should print it with a space
+>>> say_my_name("Allauh")
+My name is Allauh 
+
+#case when god forsake us
+>>> say_my_name("", "Akbar")
+My name is  Akbar
+
+#case when giving last name and "" as first name
+>>> say_my_name("", "Dab")
+My name is  Dab
+
+#case failed first name not string
+>> say_my_name(2, "Dab")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+# case failed first_name not string
+>> say_my_name(3, "Goku pls save us")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+# case Error Case last_name, god is killed we christians killed him
+>> say_my_name("Dab on the haters", 4)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
+
+# case Error last_name
+>> say_my_name("The nations", 4)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
