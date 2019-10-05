@@ -35,3 +35,6 @@ TypeError: text must be a string
 Traceback (most recent call last):
 	...
 TypeError: text must be a string
+
+#failed case without arguments
+>>> text_indentation("")
