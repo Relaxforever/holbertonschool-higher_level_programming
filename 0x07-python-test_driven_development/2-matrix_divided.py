@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+""" This Module prints a matrix depending of everything given """
+
+
 def matrix_divided(matrix, div):
+    """ Divides a Matrix and depending on what's given it will give
+    and error
+    """
     diverr = "div must be a number"
     zererr = "division by zero"
     rowerr = "Each row of the matrix must have the same size"

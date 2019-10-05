@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Module that prints a string with Hi my name is {} """
+
+
 def say_my_name(first_name, last_name=""):
     """A function that get's the first name and last name of a person
     and prints it in the standard output

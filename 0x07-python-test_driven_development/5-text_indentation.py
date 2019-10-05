@@ -7,7 +7,9 @@
 
 
 def text_indentation(text):
-
+    """Function that indents text depending of the character given ., :
+        or ? it will put the same case but with to line jumps
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
