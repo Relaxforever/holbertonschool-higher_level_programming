@@ -43,3 +43,15 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 #adding very big numbas
 >>> add_integer(10000000000, 10)
 10000000010
+
+#case failed mega float dabb on them
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+	...
+OverflowError: cannot convert float infinity to integer
+
+# CASe of nan float
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer
