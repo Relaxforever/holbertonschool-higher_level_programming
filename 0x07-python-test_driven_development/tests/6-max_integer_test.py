@@ -66,4 +66,3 @@ class TestMaxInteger(unittest.TestCase):
     def test_emptylistMatrix(self):
         """ test error empty list in matrix """
         self.assertAlmostEqual(max_integer([]), None)
-
