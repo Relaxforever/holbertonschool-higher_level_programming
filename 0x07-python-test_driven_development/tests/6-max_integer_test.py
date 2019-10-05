@@ -58,3 +58,12 @@ class TestMaxInteger(unittest.TestCase):
     def test_tuplastrings(self):
         """ test error tupla strings """
         self.assertAlmostEqual(max_integer([("hol"), ("ad")]), "hol")
+
+    def test_emptylist(self):
+        """ test error for empty matrix """
+        self.assertAlmostEqual(max_integer(), None)
+
+    def test_emptylistMatrix(self):
+        """ test error empty list in matrix """
+        self.assertAlmostEqual(max_integer([]), None)
+
