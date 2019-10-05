@@ -41,3 +41,7 @@ TypeError: text must be a string
 Traceback (most recent call last):
 	...
 TypeError: text must be a string
+
+# test only with one argument:
+>>> text_indentation('                         elo')
+elo
