@@ -37,4 +37,7 @@ Traceback (most recent call last):
 TypeError: text must be a string
 
 #failed case without arguments
->>> text_indentation("")
+>>> text_indentation(None)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
