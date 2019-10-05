@@ -41,19 +41,25 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 # case failed first_name not string
->> say_my_name(3, "Goku pls save us")
+>>> say_my_name(3, "Goku pls save us")
 Traceback (most recent call last):
 	...
 TypeError: first_name must be a string
 
 # case Error Case last_name, god is killed we christians killed him
->> say_my_name("Dab on the haters", 4)
+>>> say_my_name("Dab on the haters", 4)
 Traceback (most recent call last):
 	...
 TypeError: last_name must be a string
 
 # case Error last_name
->> say_my_name("The nations", 4)
+>>> say_my_name("The nations", 4)
 Traceback (most recent call last):
 	...
 TypeError: last_name must be a string
+
+# case error missing both arguments
+>>> say_my_name()
+Traceback (most recent call last):
+	...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
