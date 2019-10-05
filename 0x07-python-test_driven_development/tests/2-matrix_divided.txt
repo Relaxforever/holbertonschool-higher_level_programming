@@ -51,3 +51,25 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 # case divided by negative
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], -4)
 [[-0.25, -0.5, -0.75], [-1.0, -1.25, -1.5]]
+
+# case dividing by string
+>>> matrix_divided ([[1, 2, 3], [4, 5, 6]], "mama")
+Traceback (most recent call last):
+	...
+TypeError: div must be a number
+
+#case when missing one argument
+>>> matrix_divided ([[1, 2, 3], [4, 5, 6]])
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+#case when missing both arguments
+>>> matrix_divided ()
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+# case when dividing it witrh float(inf)
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
