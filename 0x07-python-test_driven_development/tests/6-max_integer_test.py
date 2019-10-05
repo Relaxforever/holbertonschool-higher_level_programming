@@ -54,6 +54,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_character(self):
         """ test character by character """
         self.assertAlmostEqual(max_integer('h'), 'h')
+
     def test_tuplastrings(self):
         """ test error tupla strings """
         self.assertAlmostEqual(max_integer([("hol"), ("ad")]), "hol")
