@@ -10,10 +10,19 @@ class Rectangle:
     """ This class we will make a classic Rectangle,it will be
     expanded upon the more we write in it """
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """This method is called when a new object is created """
         self.width = width
         self.height = height
+        type(self).number_of_instances += 1
+
+    def __del__(self):
+        """ notifies when someone deletes an instance
+            DAD ON THEM DELETERS"""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
 
     @property
     def width(self):

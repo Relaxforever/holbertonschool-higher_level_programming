@@ -65,8 +65,13 @@ class Rectangle:
             hashtag = 0
             if cont != 0:
                 rectangle += '\n'
-            for i in range(self.__width):
-                if hashtag < self.__width:
-                    rectangle += '##'
-                hashtag += 2
+            if (self.__height * self.__width) % 2 == 0:
+                for i in range(self.__width):
+                    if hashtag < self.__width:
+                        rectangle += '##'
+                        hashtag += 2
+            else:
+                for i in range(self.__width):
+                    rectangle += '#'
+                    hashtag += 1
         return rectangle

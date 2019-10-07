@@ -10,7 +10,7 @@ print(repr(my_rectangle))
 
 print("--")
 
-my_rectangle.width = 0
-my_rectangle.height = 0
+my_rectangle.width = 7
+my_rectangle.height = 3
 print(my_rectangle)
 print(repr(my_rectangle))

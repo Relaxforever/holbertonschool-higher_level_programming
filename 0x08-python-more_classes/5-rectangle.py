@@ -79,3 +79,8 @@ class Rectangle:
     def __repr__(self):
         """ Sets the repr of the rectangle """
         return 'Rectangle({}, {})'.format(self.__width, self.__height)
+
+    def __del__(self):
+        """ notifies when someone deletes an instance
+            DAD ON THEM DELETERS"""
+        print("Bye rectangle...")
