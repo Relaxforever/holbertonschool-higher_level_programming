@@ -1,0 +1,45 @@
+======================
+Using ``7-base_geometry``
+-------------------
+This is an example text file in reStructuredText format.  First
+import ```BaseGeometry``` from the ``7_Base_Geometry`` module:
+
+#testing import
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> basegeo = BaseGeometry()
+>>> print(basegeo.area())
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> basegeo.integer_validator("my_int", 15)
+
+# Check failed case negative Number
+>>> basegeo.integer_validator("width", -4)
+Traceback (most recent call last):
+ValueError: width must be greater than 0
+
+# check when value is 0
+>>> basegeo.integer_validator("age", 0) 
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+# case when missing one argument
+>>> basegeo.integer_validator("edad", )
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+# missing  all arguments
+>>> basegeo.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# only giving value argument
+>>> basegeo.integer_validator(, 5)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+#giving it multiple arguments
+>>> basegeo.integer_validator("alo", 5, 7)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given

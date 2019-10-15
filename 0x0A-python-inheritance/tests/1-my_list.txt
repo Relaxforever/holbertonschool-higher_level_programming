@@ -52,3 +52,16 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 >>> my_list2.print_sorted()
 [-6, -5, -4, -3, -2]
 
+#checks when a number is duplicated
+>>> my_list3 = MyList()
+>>> my_list3.append(4)
+>>> my_list3.append(3)
+>>> my_list3.append(3)
+>>> my_list3.append(4)
+>>> my_list3.append(3)
+>>> print(my_list3)
+[4, 3, 3, 4, 3]
+
+#sorting the number
+>>> my_list3.print_sorted()
+[3, 3, 3, 4, 4]
