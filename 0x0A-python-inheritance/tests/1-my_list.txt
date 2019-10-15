@@ -1,0 +1,54 @@
+======================
+Using ``1-my_list``
+-------------------
+This is an example text file in reStructuredText format.  First
+import ```MyList``` from the ``1-my_list`` module:
+
+>>> MyList = __import__('1-my_list').MyList
+
+# defining simple case when appending the list
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+
+#check if it worked.
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+#now check if the fuction works as intended.
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+#check if it didn't make any changes
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+# test a blank list
+>>> my_list2 = MyList()
+>>> print(my_list2)
+[]
+>>> my_list2.print_sorted()
+[]
+
+# list with an argument.
+>>> my_list.print_sorted(list())
+Traceback (most recent call last):
+TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+# check when they are negative
+>>> my_list2.append(-2)
+>>> my_list2.append(-3)
+>>> my_list2.append(-4)
+>>> my_list2.append(-6)
+>>> my_list2.append(-5)
+
+# check if it workedr
+>>> print(my_list2)
+[-2, -3, -4, -6, -5]
+
+>>> my_list2.print_sorted()
+[-6, -5, -4, -3, -2]
+
