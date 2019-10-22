@@ -47,7 +47,23 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ jsonefer """
         if json_string is None or len(json_string) == 0:
             return []
         else:
             return loads(json_string)
+
+    @classmethod
+    def load_from_file(cls):
+        """ loads the file """
+        i_list = []
+        cls_nm = cls.__name__
+        try:
+            with open("{}.json".format(cls_nm), encoding='utf-8') as file:
+                jsoner = cls.from_json_string(f.read())
+                for i in jsoner:
+                    creator = cls.create(**pointer)
+                    i_list.append(creator)
+                return i_list
+        except:
+                return i_list
