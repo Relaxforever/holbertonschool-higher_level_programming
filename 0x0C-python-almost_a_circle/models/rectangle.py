@@ -106,3 +106,11 @@ class Rectangle(Base):
         if len(kwargs) > 0 and kwargs is not None:
             for ky, vle in kwargs.items():
                 setattr(self, ky, vle)
+
+    def to_dictionary(self):
+        """ shows the class as dictionary """
+        obj_dict = {
+            'x': self.x, 'y': self.y,
+            'id': self.id, 'height': self.height,
+            'width': self.width}
+        return obj_dict
