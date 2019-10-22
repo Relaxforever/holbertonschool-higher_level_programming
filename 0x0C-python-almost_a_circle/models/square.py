@@ -40,3 +40,10 @@ class Square(Rectangle):
         elif len(kwargs) > 0 and kwargs is not None:
             for ky, vle in kwargs.items():
                 setattr(self, ky, vle)
+
+    def to_dictionary(self):
+        """ representation dict of class """
+        dict_rect = {
+            'id': self.id, 'size': self.width,
+            'x': self.x, 'y': self.y}
+        return dict_rect
