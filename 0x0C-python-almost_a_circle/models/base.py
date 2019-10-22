@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ base module """
+
 from json import dumps
 
 
