@@ -13,7 +13,7 @@ class Square(Rectangle):
     def __str__(self):
         """ string representation of the class """
         class_name = self.__class__.__name__
-        return "[{}] ({}) {}/{} - {}]".format(
+        return "[{}] ({}) {}/{} - {}".format(
             class_name,
             self.id, self.x,
             self.y, self.width)
