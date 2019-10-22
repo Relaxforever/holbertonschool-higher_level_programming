@@ -35,6 +35,16 @@ class Base:
         with open(name_cls, 'w', encoding='utf-8') as json_file:
             json_file.write(cls.to_json_string(obj_list))
 
+    @classmethod
+    def create(cls, **dictionary):
+        """ create basic instance """
+        if cls.__name__ == "Rectangle":
+            basic = cls(1, 1)
+        if cls.__name__ == "Square":
+            basic = cls(1)
+        basic.update(**dictionary)
+        return basic
+
     @staticmethod
     def from_json_string(json_string):
         if json_string is None or len(json_string) == 0:
