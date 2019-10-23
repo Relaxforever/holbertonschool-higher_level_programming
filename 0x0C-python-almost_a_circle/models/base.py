@@ -82,3 +82,15 @@ class Base:
                 return i_list
         except:
                 return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ saves a json to a file """
+        obj_list = []
+        class_name = cls.__name__
+        name_cls = "{}{}".format(class_name, ".csv")
+        if list_objs:
+            for objects in list_objs:
+                obj_list.append(objects.to_dictionary())
+        with open(name_cls, 'w', encoding='utf-8') as json_file:
+            json_file.write(cls.to_json_string(obj_list))
