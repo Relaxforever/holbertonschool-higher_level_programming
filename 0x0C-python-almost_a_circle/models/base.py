@@ -67,3 +67,19 @@ class Base:
                 return i_list
         except:
                 return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load but from cvs """
+        i_list = []
+        cls_name = cls.__name__
+        try:
+            with open("{}.csv".format(cls_name), encoding='utf-8') as filed:
+                jsoner = cls.from_json_string(filed.read())
+                for i in jsoner:
+                    creator = cls.create(**i)
+                    i_list.append(creator)
+                return i_list
+        except:
+                return []
+ 
