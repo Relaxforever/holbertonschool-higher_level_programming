@@ -59,11 +59,14 @@ class Base:
         i_list = []
         cls_nm = cls.__name__
         try:
-            with open("{}.json".format(cls_nm), encoding='utf-8') as file:
-                jsoner = cls.from_json_string(f.read())
+            with open("{}.json".format(cls_nm), encoding='utf-8') as filed:
+                jsoner = cls.from_json_string(filed.read())
                 for i in jsoner:
-                    creator = cls.create(**i)
+                    creator = cls.create(**pointer)
                     i_list.append(creator)
                 return i_list
         except:
                 return []
+
+    @classmethod
+    def load_from_file_csv(cls):
