@@ -67,6 +67,3 @@ class Base:
                 return i_list
         except:
                 return []
-
-    @classmethod
-    def load_from_file_csv(cls):
