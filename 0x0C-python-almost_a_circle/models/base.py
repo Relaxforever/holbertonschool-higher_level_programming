@@ -61,9 +61,11 @@ class Base:
         try:
             with open("{}.json".format(cls_nm), encoding='utf-8') as file:
                 jsoner = cls.from_json_string(f.read())
-                for i in jsoner:
-                    creator = cls.create(**pointer)
-                    i_list.append(creator)
-                return i_list
+                if jsoner is not None or jsoner is not "":
+                    for i in jsoner:
+                        creator = cls.create(**pointer)
+                        i_list.append(creator)
+                    return i_list
+                return []
         except:
-                return i_list
+                return []
