@@ -57,8 +57,9 @@ class Base:
     def load_from_file(cls):
         """ loads the file """
         i_list = []
+        cls_name = cls.__name__
         try:
-            with open("{}.json".format(cls.__name__), encoding='utf-8') as filed:
+            with open("{}.json".format(cls_name), encoding='utf-8') as filed:
                 jsoner = cls.from_json_string(filed.read())
                 for i in jsoner:
                     creator = cls.create(**i)
