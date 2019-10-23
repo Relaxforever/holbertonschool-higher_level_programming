@@ -57,12 +57,11 @@ class Base:
     def load_from_file(cls):
         """ loads the file """
         i_list = []
-        cls_nm = cls.__name__
         try:
-            with open("{}.json".format(cls_nm), encoding='utf-8') as filed:
+            with open("{}.json".format(cls.__name__), encoding='utf-8') as filed:
                 jsoner = cls.from_json_string(filed.read())
                 for i in jsoner:
-                    creator = cls.create(**pointer)
+                    creator = cls.create(**i)
                     i_list.append(creator)
                 return i_list
         except:
