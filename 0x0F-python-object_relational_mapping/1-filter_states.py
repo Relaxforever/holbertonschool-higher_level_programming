@@ -14,5 +14,4 @@ if __name__ == "__main__":
                    LIKE 'N%' ORDER BY id asc")
     rows = cursor.fetchall()
     for row in rows:
-        print("{}".format(row), end="")
-        print()
+        print("{}".format(row))
