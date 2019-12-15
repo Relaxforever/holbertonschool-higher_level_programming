@@ -6,9 +6,9 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class states(Base):
-
+class State(Base):
     """the state clase holds all information about state table"""
+
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, unique=True,
                 autoincrement=True, nullable=False)
