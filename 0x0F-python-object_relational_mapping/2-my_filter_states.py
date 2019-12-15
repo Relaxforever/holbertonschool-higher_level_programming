@@ -11,7 +11,7 @@ if __name__ == "__main__":
                           port=3306)
     cursor = con.cursor()
     cursor.execute("SELECT * from states WHERE name\
-                   LIKE '{}' ORDER BY id asc"
+                   LIKE BINARY '{}' ORDER BY id asc"
                    .format(sys.argv[4]))
     rows = cursor.fetchall()
     for row in rows:
