@@ -6,12 +6,12 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(sys.argv[1],
-    sys.argv[2], sys.argv[3]))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).all(): # HERE: no SQL query, only objects!
-        print("{}: {}".format(state.id, state.name))
+    first = session.query(State).filter_by(id='1').first()
+    print("{}: {}".format(first.id, first.name))
     session.close()
