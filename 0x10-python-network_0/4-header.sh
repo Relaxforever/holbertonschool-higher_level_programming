@@ -1,3 +1,3 @@
 #!/bin/bash
 # script to get the size of the header
-curl "$1" -X GET -H "X-HolbertonSchool-User-Id: 98"
+curl -Ls "$1" -X GET -H "X-HolbertonSchool-User-Id: 98"
