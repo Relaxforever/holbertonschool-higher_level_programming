@@ -3,6 +3,5 @@
 from urllib import request
 from sys import argv
 with request.urlopen(argv[1]) as response:
-    for key, value in response.info().items():
-        if key == "X-Request-Id":
-            print(value)
+    header_dict = response.headers
+    print(header_dict.get('X-Request-Id'))
