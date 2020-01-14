@@ -7,6 +7,4 @@ star_dict = response.json()
 print("Number of results: {}".format(star_dict['count']))
 results_list = star_dict['results']
 for character_dict in results_list:
-    for key, value in character_dict.items():
-        if key == 'name':
-            print(value)
+    print(character_dict.get('name'))
