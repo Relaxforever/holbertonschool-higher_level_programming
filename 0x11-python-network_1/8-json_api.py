@@ -9,7 +9,9 @@ if __name__ == "__main__":
             param = {'q': ''}
         response = post("http://0.0.0.0:5000/search_user", param)
         response = response.json()
-        print("[{}] {}".format(response['id'], response['name']))
-    except KeyError:
-        print("")
+        if 'name' in response or 'id' in response:
+            print("[{}] {}".format(response['id'], response['name']))
+        else:
+            print("No result")
     except Exception:
+        print("Not a valid JSON")
