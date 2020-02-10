@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const Rectangle = require('./4-rectangle');
-class Square extends Rectangle {
+const SquareFirst = require('./5-square.js');
+class Square extends SquareFirst {
   constructor (size) {
     super(size, size);
   }
